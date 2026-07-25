@@ -1,0 +1,43 @@
+{
+  "id": "assistant-suite",
+  "name": "辅助合集",
+  "description": "将心声通知、战斗辅助和库皮亚相关功能集中管理, 可单独开关.",
+  "version": "1.0.0",
+  "depends": {
+    "modloader-api": "*"
+  },
+  "injections": [
+    {
+      "name": "游戏辅助核心",
+      "path": "./assets/assistant-suite/core.js"
+    },
+    {
+      "name": "心声通知",
+      "path": "./assets/assistant-suite/mind-voice.js"
+    },
+    {
+      "name": "一拳超人",
+      "path": "./assets/assistant-suite/one-punch.js"
+    },
+    {
+      "name": "魔力助手",
+      "path": "./assets/assistant-suite/magic-assistant.js"
+    },
+    {
+      "name": "魔眼助手",
+      "path": "./assets/assistant-suite/magic-eye.js"
+    },
+    {
+      "name": "邪眼助手",
+      "path": "./assets/assistant-suite/evil-eye.js"
+    },
+    {
+      "name": "常驻多艾露二世",
+      "path": "./assets/assistant-suite/resident-kupya-2.js"
+    },
+    {
+      "name": "库皮亚常驻书架",
+      "path": "./assets/assistant-suite/kupya-shelf.js"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "title": "辅助合集",
+  "description": "保存后约 1 秒内生效. 剧本类功能会在下次读取对应剧本时应用.",
+  "fields": [
+    {
+      "key": "mindVoice",
+      "type": "toggle",
+      "label": "心声通知",
+      "default": true,
+      "help": "在触发心声标签时显示右上角通知."
+    },
+    {
+      "key": "onePunch",
+      "type": "toggle",
+      "label": "一拳超人",
+      "default": false,
+      "help": "将击败Neo德比伦的计数一键归零."
+    },
+    {
+      "key": "magicAssistant",
+      "type": "toggle",
+      "label": "魔力助手",
+      "default": false,
+      "help": "将魔力判定结果固定为 Perfect."
+    },
+    {
+      "key": "magicEye",
+      "type": "toggle",
+      "label": "魔眼助手",
+      "default": false,
+      "help": "将魔眼判定结果固定为 Perfect."
+    },
+    {
+      "key": "evilEye",
+      "type": "toggle",
+      "label": "邪眼助手",
+      "default": false,
+      "help": "将邪眼判定结果固定为 Perfect."
+    },
+    {
+      "key": "residentKupya2",
+      "type": "toggle",
+      "label": "常驻多艾露二世",
+      "default": true,
+      "help": "取消多艾露二世剧情的愚人节日期限制."
+    },
+    {
+      "key": "kupyaShelf",
+      "type": "toggle",
+      "label": "库皮亚常驻书架",
+      "default": true,
+      "help": "当解锁库皮亚后, 让库皮亚持续显示在书架场景中."
+    }
+  ]
+}
