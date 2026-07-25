@@ -1,8 +1,8 @@
 {
   "id": "assistant-suite",
   "name": "辅助合集",
-  "description": "将心声通知、战斗辅助和库皮亚相关功能集中管理, 可单独开关.",
-  "version": "1.0.0",
+  "description": "将心声通知、战斗辅助、库皮亚相关功能和实验性内存优化集中管理, 可单独开关.",
+  "version": "1.1.0",
   "depends": {
     "modloader-api": "*"
   },
@@ -10,6 +10,10 @@
     {
       "name": "游戏辅助核心",
       "path": "./assets/assistant-suite/core.js"
+    },
+    {
+      "name": "内存优化",
+      "path": "./assets/assistant-suite/memory-optimizer.js"
     },
     {
       "name": "心声通知",

@@ -13,6 +13,7 @@
     evilEye: false,
     residentKupya2: true,
     kupyaShelf: true,
+    memoryOptimizer: false,
   })
 
   if (global[MODULE_KEY]) return
