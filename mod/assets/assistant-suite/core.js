@@ -13,7 +13,6 @@
     evilEye: false,
     residentKupya2: true,
     kupyaShelf: true,
-    memoryOptimizer: false,
   })
 
   if (global[MODULE_KEY]) return
@@ -32,7 +31,7 @@
   let lastConfigContent = null
 
   function loadSettings() {
-    const api = global.api && global.api.modloader
+    const api = global.modloader
     if (!api || typeof api.readFileSync !== 'function') return Object.assign({}, defaults)
     try {
       lastConfigContent = api.readFileSync(CONFIG_PATH)
@@ -56,7 +55,7 @@
   }
 
   function refreshSettings() {
-    const api = global.api && global.api.modloader
+    const api = global.modloader
     if (configReading || !api || typeof api.readFile !== 'function') return
     configReading = true
     Promise.resolve().then(function () {

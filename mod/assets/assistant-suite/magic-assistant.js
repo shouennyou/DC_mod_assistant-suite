@@ -13,9 +13,9 @@
   let isRegistered = false
 
   function getKsApi() {
-    const modloader = global.modloader
-    if (!modloader || !modloader.api || !modloader.api.ks || !modloader.api.ks.register) return null
-    const register = modloader.api.ks.register
+    const modloader = global.modloaderApi
+    if (!modloader || !modloader.ks || !modloader.ks.register) return null
+    const register = modloader.ks.register
     if (typeof register.json !== 'function') return null
     return register
   }

@@ -1,19 +1,23 @@
 {
   "id": "assistant-suite",
   "name": "辅助合集",
-  "description": "将心声通知、战斗辅助、库皮亚相关功能和实验性内存优化集中管理, 可单独开关.",
-  "version": "1.1.0",
+  "author": [
+    "逍婉瑶"
+  ],
+  "description": "将心声通知、战斗辅助和库皮亚相关功能集中管理, 可单独开关.",
+  "version": "1.2.0",
+  "update": {
+    "source": "github",
+    "repo": "shouennyou/DC_mod_assistant-suite"
+  },
   "depends": {
-    "modloader-api": "*"
+    "devilconnection-modloader": ">=1.7.0",
+    "modloader-api": ">=0.3.0"
   },
   "injections": [
     {
       "name": "游戏辅助核心",
       "path": "./assets/assistant-suite/core.js"
-    },
-    {
-      "name": "内存优化",
-      "path": "./assets/assistant-suite/memory-optimizer.js"
     },
     {
       "name": "心声通知",
