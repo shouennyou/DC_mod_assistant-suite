@@ -5,7 +5,7 @@
     "逍婉瑶"
   ],
   "description": "将心声通知、战斗辅助和库皮亚相关功能集中管理, 可单独开关.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "update": {
     "source": "github",
     "repo": "shouennyou/DC_mod_assistant-suite"
