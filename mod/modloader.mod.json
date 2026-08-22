@@ -11,8 +11,8 @@
     "repo": "shouennyou/DC_mod_assistant-suite"
   },
   "depends": {
-    "devilconnection-modloader": ">=1.7.0",
-    "modloader-api": ">=0.3.0"
+    "devilconnection-modloader": ">=1.7.1",
+    "modloader-api": ">=0.4.0"
   },
   "injections": [
     {

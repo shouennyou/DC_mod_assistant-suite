@@ -130,4 +130,14 @@
 
   global[MODULE_KEY] = suite
   startSettingsPolling()
+
+  function reportRegistration() {
+    const registration = global.modloaderApi && global.modloaderApi.registration
+    if (registration && typeof registration.complete === 'function') {
+      registration.complete('assistant-suite', true)
+      return
+    }
+    global.setTimeout(reportRegistration, 100)
+  }
+  reportRegistration()
 })(window)
