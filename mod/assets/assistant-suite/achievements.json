@@ -1,0 +1,54 @@
+{
+  "iconBasePath": "data/image/steam/",
+  "fallbackIcon": "maseki.png",
+  "achievements": {
+    "OMAKE": {
+      "title": "解锁特典！",
+      "text": "解锁“特典/花絮”内容",
+      "icon": "omake.png",
+      "hidden": false
+    },
+    "CHARA_COMP": {
+      "title": "全角色收集",
+      "text": "达成角色完全收集",
+      "icon": "chara.png",
+      "hidden": false
+    },
+    "END_COMP": {
+      "title": "全结局收集",
+      "text": "达成结局完全收集",
+      "icon": "end.png",
+      "hidden": false
+    },
+    "GEKIZYOU_COMP": {
+      "title": "库皮哒呀小剧场大满贯",
+      "text": "达成“库皮哒呀小剧场”完全收集",
+      "icon": "geki.png",
+      "hidden": false
+    },
+    "MP_2000": {
+      "title": "2000%",
+      "text": "累计收集 2000% 的 MP",
+      "icon": "2000.png",
+      "hidden": false
+    },
+    "MP_4000": {
+      "title": "4000%",
+      "text": "累计收集 4000% 的 MP",
+      "icon": "4000.png",
+      "hidden": false
+    },
+    "MP_6000": {
+      "title": "6000%",
+      "text": "累计收集 6000% 的 MP",
+      "icon": "6000.png",
+      "hidden": false
+    },
+    "MP_6666": {
+      "title": "6666%",
+      "text": "累计收集 6666% 的 MP",
+      "icon": "6666.png",
+      "hidden": false
+    }
+  }
+}

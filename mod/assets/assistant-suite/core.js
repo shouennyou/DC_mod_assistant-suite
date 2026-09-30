@@ -13,6 +13,9 @@
     evilEye: false,
     residentKupya2: true,
     kupyaShelf: true,
+    virtualAchievements: false,
+    virtualAchievementPersistence: true,
+    clearVirtualAchievementRecords: false,
   })
 
   if (global[MODULE_KEY]) return

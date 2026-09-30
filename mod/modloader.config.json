@@ -50,6 +50,27 @@
       "label": "库皮亚常驻书架",
       "default": true,
       "help": "当解锁库皮亚后, 让库皮亚持续显示在书架场景中."
+    },
+    {
+      "key": "virtualAchievements",
+      "type": "toggle",
+      "label": "使用虚拟成就",
+      "default": false,
+      "help": "关闭时触发 Steam 成就; 开启时仅触发模组的成就通知, 不会触发 Steam."
+    },
+    {
+      "key": "virtualAchievementPersistence",
+      "type": "toggle",
+      "label": "虚拟成就持久化",
+      "default": true,
+      "help": "开启时每个虚拟成就只显示一次, 解锁记录保存在 config 中; 关闭时每次触发都显示."
+    },
+    {
+      "key": "clearVirtualAchievementRecords",
+      "type": "toggle",
+      "label": "清除虚拟成就记录",
+      "default": false,
+      "help": "保存开启后会清空虚拟成就解锁记录, 随后自动恢复为关闭."
     }
   ]
 }
