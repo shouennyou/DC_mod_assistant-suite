@@ -1,6 +1,6 @@
 {
   "title": "辅助合集",
-  "description": "保存后部分功能约 1 秒内生效. 剧本类功能会在下次读取对应剧本时应用.",
+  "description": "保存后部分功能约 1 秒内生效. 剧本类功能会在下次读取对应剧本时应用；存档读取缓存会在下次打开存档或读档菜单时应用.",
   "fields": [
     {
       "key": "mindVoice",
@@ -50,6 +50,13 @@
       "label": "库皮亚常驻书架",
       "default": true,
       "help": "当解锁库皮亚后, 让库皮亚持续显示在书架场景中."
+    },
+    {
+      "key": "saveDataCache",
+      "type": "toggle",
+      "label": "存档读取缓存",
+      "default": true,
+      "help": "打开存档或读档菜单后复用存档数据，翻页更快；关闭菜单或读档后自动释放."
     },
     {
       "key": "virtualAchievements",

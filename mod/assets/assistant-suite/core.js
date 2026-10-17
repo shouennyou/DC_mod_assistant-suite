@@ -13,6 +13,7 @@
     evilEye: false,
     residentKupya2: true,
     kupyaShelf: true,
+    saveDataCache: true,
     virtualAchievements: false,
     virtualAchievementPersistence: true,
     clearVirtualAchievementRecords: false,
