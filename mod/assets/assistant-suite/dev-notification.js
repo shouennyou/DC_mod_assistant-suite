@@ -9,7 +9,7 @@
   const HOST_ID = 'assistant-suite-dev-notification-host'
   const STYLE_ID = 'assistant-suite-dev-notification-style'
   const CONTAINER_ID = 'assistant-suite-dev-notification-container'
-  const ACHIEVEMENT_CONFIG_PATH = 'mods/assistant-suite/assets/assistant-suite/achievements.json'
+  const ACHIEVEMENT_CONFIG_PATH = 'assets/assistant-suite/achievements.json'
   const SUITE_CONFIG_PATH = 'config/assistant-suite.json'
   const ACHIEVEMENT_STATE_PATH = 'config/assistant-suite-achievement-state.json'
   const STEAM_ACHIEVEMENT_TAG = 'steam_achievement_activate'
@@ -179,13 +179,16 @@
   }
 
   function refreshAchievementConfig(force) {
-    const api = global.modloader
-    if (!api || typeof api.readFileSync !== 'function') return achievementConfig
     try {
-      const content = String(api.readFileSync(ACHIEVEMENT_CONFIG_PATH) || '')
-      if (force || content !== lastAchievementConfigContent) {
-        achievementConfig = parseAchievementConfig(content)
-        lastAchievementConfigContent = content
+      const xhr = new global.XMLHttpRequest()
+      xhr.open('GET', ACHIEVEMENT_CONFIG_PATH, false)
+      xhr.send(null)
+      if (xhr.status === 200 || xhr.status === 0) {
+        const content = String(xhr.responseText || '')
+        if (force || content !== lastAchievementConfigContent) {
+          achievementConfig = parseAchievementConfig(content)
+          lastAchievementConfigContent = content
+        }
       }
     } catch (error) {
       console.warn('[游戏辅助合集] 成就配置读取失败, 将保留当前配置.', error)
