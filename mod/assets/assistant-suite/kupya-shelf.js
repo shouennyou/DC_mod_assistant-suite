@@ -4,7 +4,11 @@
   const suite = global.__gameAssistantSuite
   if (!suite) return
 
-  const originalValue = "tf.bgPrefix = sf.characters.includes('クピャドエル') && Math.random()*100+1>=100 ? '_' : ''"
+  const originalValues = [
+    "tf.bgPrefix = sf.characters.includes('クピャドエル') && Math.random()*100+1>=100 ? '_' : ''",
+    "tf.bgPrefix = sf.characters.includes('クピャドエル') && f.end_complete != 1 && Math.random()*100+1>=100 ? '_' : ''"
+  ]
+
   const nextValue = "tf.bgPrefix = sf.characters.includes('クピャドエル') ? '_' : ''"
   let isRegistered = false
 
@@ -23,10 +27,19 @@
       if (!entry || typeof entry !== 'object') return entry
 
       const nextEntry = Object.assign({}, entry)
-      if (nextEntry.val === originalValue) nextEntry.val = nextValue
 
-      if (nextEntry.pm && typeof nextEntry.pm === 'object' && nextEntry.pm.val === originalValue) {
-        nextEntry.pm = Object.assign({}, nextEntry.pm, { val: nextValue })
+      if (originalValues.includes(nextEntry.val)) {
+        nextEntry.val = nextValue
+      }
+
+      if (
+        nextEntry.pm &&
+        typeof nextEntry.pm === 'object' &&
+        originalValues.includes(nextEntry.pm.val)
+      ) {
+        nextEntry.pm = Object.assign({}, nextEntry.pm, {
+          val: nextValue
+        })
       }
 
       return nextEntry
