@@ -59,6 +59,14 @@
       "help": "打开存档或读档菜单后复用存档数据，翻页更快；关闭菜单或读档后自动释放."
     },
     {
+      "key": "stickerLimit",
+      "type": "number",
+      "label": "照片装饰贴纸上限",
+      "default": 10,
+      "placeholder": "10",
+      "help": "照片装饰中可使用的贴纸最大数量；请输入非负整数，保存后下次进入照片装饰时生效."
+    },
+    {
       "key": "virtualAchievements",
       "type": "toggle",
       "label": "使用虚拟成就",

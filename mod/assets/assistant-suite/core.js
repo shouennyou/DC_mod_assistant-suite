@@ -14,6 +14,7 @@
     residentKupya2: true,
     kupyaShelf: true,
     saveDataCache: true,
+    stickerLimit: 10,
     virtualAchievements: false,
     virtualAchievementPersistence: true,
     clearVirtualAchievementRecords: false,
@@ -27,7 +28,12 @@
     const saved = JSON.parse(content)
     if (!saved || typeof saved !== 'object' || Array.isArray(saved)) return next
     Object.keys(defaults).forEach(function (key) {
-      if (typeof saved[key] === 'boolean') next[key] = saved[key]
+      if (typeof defaults[key] === 'boolean' && typeof saved[key] === 'boolean') {
+        next[key] = saved[key]
+      }
+      if (key === 'stickerLimit' && typeof saved[key] === 'number' && Number.isFinite(saved[key])) {
+        next[key] = Math.max(0, Math.floor(saved[key]))
+      }
     })
     return next
   }
@@ -124,6 +130,9 @@
   const suite = {
     isEnabled: function (key) {
       return settings[key] === true
+    },
+    getNumber: function (key) {
+      return typeof settings[key] === 'number' ? settings[key] : null
     },
     registerEvalTransform: function (id, transform) {
       if (typeof id !== 'string' || typeof transform !== 'function' || transformers.has(id)) return
